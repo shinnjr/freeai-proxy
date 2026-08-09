@@ -1,0 +1,2 @@
+[console_scripts]
+freeai-proxy = freeai_proxy.cli:main
