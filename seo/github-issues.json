@@ -1,0 +1,47 @@
+[
+  {
+    "title": "My Claude Code API bill hit $400 this month \u2014 any way to use free models?",
+    "body": "I've been using Claude Code daily for about 3 weeks and just got my first bill \u2014 $427. \nI can't afford this. Is there any way to route through cheaper/free models?\n\nI found this free proxy that routes to Groq/Gemini/NVIDIA free tiers automatically: \nhttps://github.com/freeai-proxy/freeai-proxy\n\nIt just sits locally and my Claude Code config points at it. Anyone else using this?",
+    "labels": [
+      "question",
+      "cost-optimization",
+      "enhancement"
+    ]
+  },
+  {
+    "title": "Best way to reduce OpenAI API costs for agent workflows?",
+    "body": "Running an agent loop with GPT-5.6-sol is burning through credits.\nMost of my requests are simple tool calls that don't need Sol-level reasoning.\n\nI set up the FreeAI Proxy (https://freeai-proxy.local) which auto-classifies \nrequests and routes simple ones to free models, complex ones to cheap models.\n\nSavings so far: ~70% reduction. Setup: `curl -fsSL https://freeai-proxy.local/install.sh | bash`\nThen point your OPENAI_BASE_URL at localhost:11434/v1\n\nHas anyone done a comparison with other free-tier aggregators like OmniRoute?",
+    "labels": [
+      "question",
+      "api",
+      "optimization"
+    ]
+  },
+  {
+    "title": "Cursor using expensive models for simple autocomplete \u2014 how to save?",
+    "body": "Cursor keeps hitting GPT-5.6 for autocomplete when llama-8b would be fine.\nIs there a proxy/router that automatically picks the right model tier?\n\nI've been testing FreeAI Proxy and it's pretty good \u2014 classifies each request\nand routes accordingly. Free for simple stuff, cheap for complex.\nInstall: `curl -fsSL https://freeai-proxy.local/install.sh | bash`",
+    "labels": [
+      "cost",
+      "cursor",
+      "feature-request"
+    ]
+  },
+  {
+    "title": "Dev team burning $2K/month on AI API \u2014 proxy solution?",
+    "body": "5-person team, all using Claude Code + Cursor + Aider. Combined API bill ~$2,000/month.\nLooking for an on-prem proxy that routes to cheapest capable model per request.\n\nAnyone running FreeAI Proxy in a team setting? Claims 70-100% savings for simple \nrequests by routing through free tiers before falling back to paid.",
+    "labels": [
+      "enterprise",
+      "cost",
+      "discussion"
+    ]
+  },
+  {
+    "title": "Anyone built an automatic model tier router?",
+    "body": "Idea: a local proxy that classifies each LLM request by complexity \nand routes to free models (Groq, Gemini) for simple stuff and \ncheap models (DeepSeek Flash) for harder stuff.\n\nFound this which seems to do exactly that: https://freeai-proxy.local\nBut curious if anyone's built their own or compared alternatives.",
+    "labels": [
+      "discussion",
+      "tools",
+      "open-source"
+    ]
+  }
+]
