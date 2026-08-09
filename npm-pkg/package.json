@@ -1,0 +1,24 @@
+{
+  "name": "freeai-proxy",
+  "version": "1.0.0",
+  "description": "Zero-cost AI model routing proxy. Automatically selects cheapest capable model per request.",
+  "main": "install.js",
+  "bin": {
+    "freeai-proxy": "./install.js"
+  },
+  "keywords": [
+    "ai",
+    "proxy",
+    "free",
+    "cost-savings",
+    "llm",
+    "router",
+    "openai",
+    "anthropic"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/freeai-proxy/freeai-proxy",
+  "scripts": {
+    "install": "node install.js"
+  }
+}
