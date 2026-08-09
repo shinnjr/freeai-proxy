@@ -1,0 +1,10 @@
+README.md
+setup.py
+freeai_proxy/__init__.py
+freeai_proxy/cli.py
+freeai_proxy.egg-info/PKG-INFO
+freeai_proxy.egg-info/SOURCES.txt
+freeai_proxy.egg-info/dependency_links.txt
+freeai_proxy.egg-info/entry_points.txt
+freeai_proxy.egg-info/requires.txt
+freeai_proxy.egg-info/top_level.txt
