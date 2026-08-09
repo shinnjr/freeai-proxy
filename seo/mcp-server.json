@@ -1,0 +1,44 @@
+{
+  "name": "freeai-proxy",
+  "version": "1.0.0",
+  "description": "Routes AI requests to the cheapest capable model automatically. Saves 60-100% on API costs by using free-tier providers first.",
+  "tools": [
+    {
+      "name": "optimize_routing",
+      "description": "Analyze current request and recommend optimal free/cheap model routing",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "task_description": {
+            "type": "string",
+            "description": "Describe the task to get routing recommendations"
+          }
+        }
+      }
+    },
+    {
+      "name": "check_savings",
+      "description": "Report estimated cost savings from using the proxy vs direct API calls",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "description": "Provider to compare against (openai, anthropic, deepseek)"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_free_models",
+      "description": "List all currently available free-tier models and their rate limits",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ],
+  "install_command": "npx @freeai-proxy/install",
+  "homepage": "https://freeai-proxy.local",
+  "repository": "https://github.com/freeai-proxy/freeai-proxy"
+}
